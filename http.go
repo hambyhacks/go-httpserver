@@ -14,6 +14,7 @@ func fsHandler() http.Handler {
 	var rw *http.Request
 	r := chi.NewRouter()
 
+	// Use logging middleware
 	r.Use(middleware.Logger)
 	r.Handle("/*", serveFiles(w, rw))
 
@@ -21,6 +22,7 @@ func fsHandler() http.Handler {
 }
 
 func serveFiles(w http.ResponseWriter, r *http.Request) http.Handler {
+	// Get current working directory
 	dir, err := os.Getwd()
 	if err != nil {
 		log.Println(err)

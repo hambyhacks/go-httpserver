@@ -17,7 +17,7 @@ func main() {
 	var port int
 
 	// Set flags
-	flag.IntVar(&port, "p", 9000, "-p [Port to be used]")
+	flag.IntVar(&port, "p", 9000, "Port number to be used.")
 	flag.Parse()
 
 	// Set HTTP server config
