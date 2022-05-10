@@ -1,4 +1,4 @@
-module httpserver
+module github.com/hambyhacks/httpserver
 
 go 1.18
 
