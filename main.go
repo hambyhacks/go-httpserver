@@ -16,8 +16,17 @@ func main() {
 	// Config
 	var port int
 
+	// Banner
+	fmt.Print("====================================================================================\n")
+	fmt.Print("\t\t\t\tGo-Http.Server\n\n")
+	fmt.Print("Description: Similar to python3 -m http.server [PORT]. Only implemented file server.\n")
+	fmt.Print("Usage: httpserver -p [PORT] (defaults to 9000)\n\n")
+	fmt.Print("Written by: hambyhacks\n")
+	fmt.Print("Twitter: @hambyhaxx\n")
+	fmt.Print("Github: github.com/hambyhacks\n")
+	fmt.Print("====================================================================================\n\n")
 	// Set flags
-	flag.IntVar(&port, "p", 9000, "-p [Port to be used]")
+	flag.IntVar(&port, "p", 9000, "Port number to be used.")
 	flag.Parse()
 
 	// Set HTTP server config
